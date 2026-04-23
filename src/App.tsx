@@ -5,7 +5,7 @@ import { Footer } from "@/components/landing/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <main>
         <Hero />
         <Work />
