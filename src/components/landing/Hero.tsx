@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Download, MessageCircle, ChevronDown } from "lucide-react";
 
-const WHATSAPP_NUMBER = "1234567890"; // TODO: replace with your number in international format (no +, no spaces)
+const WHATSAPP_NUMBER = "8921318291"; // TODO: replace with your number in international format (no +, no spaces)
 const WHATSAPP_MESSAGE = "Hi Astrivix, I'd like to discuss a project.";
 
 import Grainient from "@/components/ui/Grainient";
@@ -61,33 +61,27 @@ export function Hero() {
         </p>
 
         {/* CTA Row */}
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:gap-3">
           <Button
             asChild
             size="lg"
-            className="group h-12 rounded-full bg-gradient-primary px-7 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:scale-105 active:scale-95"
+            className="group h-12 w-full sm:w-auto rounded-full bg-gradient-primary px-7 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:scale-105 active:scale-95"
           >
-            <a href="#work" className="flex items-center gap-2">
+            <a href="https://astrivix.in" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
               Start a Project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
 
-          <Button asChild size="lg" variant="outline" className="h-12 rounded-full border-white/10 bg-white/5 px-5 backdrop-blur-xl transition-all hover:bg-white/10">
+          <Button asChild size="lg" variant="outline" className="h-12 w-full sm:w-auto rounded-full border-white/10 bg-white/5 px-5 backdrop-blur-xl transition-all hover:bg-white/10">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2"
+              className="flex items-center justify-center gap-2"
             >
               <MessageCircle className="h-4 w-4" />
-              <span className="hidden sm:inline text-sm">WhatsApp</span>
-            </a>
-          </Button>
-
-          <Button asChild size="lg" variant="outline" className="h-12 rounded-full border-white/10 bg-white/5 px-5 backdrop-blur-xl transition-all hover:bg-white/10">
-            <a href="/astrivix-brochure.pdf" download="Astrivix-Brochure.pdf">
-              <Download className="h-4 w-4" />
+              <span className="text-sm">WhatsApp</span>
             </a>
           </Button>
         </div>

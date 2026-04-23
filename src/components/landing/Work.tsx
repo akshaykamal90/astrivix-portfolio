@@ -61,7 +61,7 @@ export function Work() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative block overflow-hidden rounded-3xl border border-border/50 bg-gradient-card transition-spring hover:border-primary/40 hover:shadow-glow"
+              className="group relative flex flex-col md:block overflow-hidden rounded-3xl border border-border/50 bg-gradient-card transition-spring hover:border-primary/40 hover:shadow-glow"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -72,9 +72,9 @@ export function Work() {
                   height={960}
                   className="h-full w-full object-cover transition-spring group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <div className="flex flex-1 flex-col justify-between p-6 md:absolute md:inset-x-0 md:bottom-0 md:p-8">
                 <div className="flex items-end justify-between gap-4">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-widest text-primary-glow">

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -19,10 +19,17 @@ export function Footer() {
               digital products for ambitious brands.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Twitter, Linkedin, Github].map((Icon, i) => (
+              {[
+                { Icon: Twitter, href: "#" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Github, href: "#" },
+                { Icon: Instagram, href: "https://www.instagram.com/astrivix.in/?hl=en" }
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   aria-label="Social link"
                   className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/60 bg-surface/60 text-muted-foreground transition-smooth hover:border-primary/40 hover:text-foreground"
                 >

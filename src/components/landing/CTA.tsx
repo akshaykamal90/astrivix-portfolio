@@ -22,7 +22,7 @@ export function CTA() {
             size="lg"
             className="bg-gradient-primary text-primary-foreground shadow-glow transition-spring hover:scale-105"
           >
-            <a href="mailto:hello@astrivix.com">
+            <a href="https://astrivix.in" target="_blank" rel="noopener noreferrer">
               Start a Project <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
