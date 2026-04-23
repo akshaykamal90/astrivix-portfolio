@@ -1,33 +1,37 @@
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
+import takeoffImg from "@/assets/takeoff-holidayz.png";
+import nretImg from "@/assets/nret.png";
+import omniblendImg from "@/assets/omniblend.png";
+import portfolioImg from "@/assets/portfolio-website.png";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Nebula Analytics",
-    category: "SaaS Platform",
-    description: "End-to-end product design and Next.js build for a data analytics suite.",
-    image: work1,
+    title: "Takeoff Holidayz",
+    category: "Travel • UI/UX • Responsive",
+    description: "A modern travel website crafted to simplify the booking journey and enhance user experience.",
+    image: takeoffImg,
+    link: "https://www.takeoffholidayz.in",
   },
   {
-    title: "Maison Édit",
-    category: "E-commerce",
-    description: "Editorial Shopify storefront for a luxury fashion label.",
-    image: work2,
+    title: "NRET Institute",
+    category: "LMS • Web Design • UI/UX",
+    description: "A structured LMS platform crafted to simplify online course delivery and enhance student engagement.",
+    image: nretImg,
+    link: "https://nret.vercel.app",
   },
   {
-    title: "Pulse Finance",
-    category: "Fintech App",
-    description: "React Native mobile banking experience with custom design system.",
-    image: work3,
+    title: "OmniBlend – Randall Harvest",
+    category: "E-commerce • Web Design • UI/UX",
+    description: "A refined e-commerce experience built for a luxury spice brand with a seamless buying journey.",
+    image: omniblendImg,
+    link: "https://omniblend-v2-1.vercel.app",
   },
   {
-    title: "Studio Orbit",
-    category: "Brand Site",
-    description: "Award-winning portfolio site for a creative production studio.",
-    image: work4,
+    title: "Personal Branding Portfolio",
+    category: "Personal Branding • UI/UX",
+    description: "A refined portfolio experience built to position individuals as strong personal brands.",
+    image: portfolioImg,
+    link: "https://nithin-surendran-menon.vercel.app",
   },
 ];
 
@@ -52,9 +56,12 @@ export function Work() {
 
         <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
-            <article
+            <a
               key={project.title}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-gradient-card transition-spring hover:border-primary/40 hover:shadow-glow"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block overflow-hidden rounded-3xl border border-border/50 bg-gradient-card transition-spring hover:border-primary/40 hover:shadow-glow"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -81,11 +88,11 @@ export function Work() {
                     </p>
                   </div>
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border/60 bg-surface/80 backdrop-blur transition-spring group-hover:bg-gradient-primary group-hover:text-primary-foreground">
-                    <ArrowUpRight className="h-5 w-5" />
+                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                   </div>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
