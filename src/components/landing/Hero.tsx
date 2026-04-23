@@ -4,7 +4,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section className="relative isolate overflow-hidden pt-24 pb-24 md:pt-32 md:pb-32">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -26,14 +26,13 @@ export function Hero() {
           </div>
 
           <h1 className="text-balance text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl">
-            We build{" "}
-            <span className="text-gradient">digital experiences</span>{" "}
-            that convert.
+            Portfolio of{" "}
+            <span className="text-gradient">Astrivix</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
-            Astrivix is a web development agency crafting fast, beautiful
-            websites and products for ambitious brands and startups.
+            A selection of fast, beautiful websites and digital products we've
+            crafted for ambitious brands and startups.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
