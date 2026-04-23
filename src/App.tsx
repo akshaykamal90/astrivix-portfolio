@@ -1,0 +1,19 @@
+import { Hero } from "@/components/landing/Hero";
+import { Work } from "@/components/landing/Work";
+import { CTA } from "@/components/landing/CTA";
+import { Footer } from "@/components/landing/Footer";
+
+function App() {
+  return (
+    <div className="min-h-screen bg-background">
+      <main>
+        <Hero />
+        <Work />
+        <CTA />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
