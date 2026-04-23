@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Download, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "1234567890"; // TODO: replace with your number in international format (no +, no spaces)
+const WHATSAPP_MESSAGE = "Hi Astrivix, I'd like to discuss a project.";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export function Hero() {
@@ -35,7 +38,7 @@ export function Hero() {
             crafted for ambitious brands and startups.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
             <Button
               asChild
               size="lg"
@@ -46,7 +49,26 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-border/60 bg-surface/40 backdrop-blur">
-              <a href="#cta">Start a Project</a>
+              <a
+                href="/astrivix-brochure.pdf"
+                download="Astrivix-Brochure.pdf"
+              >
+                <Download className="h-4 w-4" /> Download Brochure
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-border/60 bg-surface/40 backdrop-blur"
+            >
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
+              </a>
             </Button>
           </div>
         </div>
