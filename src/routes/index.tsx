@@ -1,10 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
-import { TrustedBy } from "@/components/landing/TrustedBy";
 import { Work } from "@/components/landing/Work";
-import { Features } from "@/components/landing/Features";
-import { Testimonials } from "@/components/landing/Testimonials";
 import { CTA } from "@/components/landing/CTA";
 import { Footer } from "@/components/landing/Footer";
 
@@ -16,13 +13,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Astrivix is a web development agency designing and building fast, beautiful websites and digital products for startups and brands.",
+          "Astrivix is a web development studio showcasing fast, beautiful websites and digital products built for ambitious brands.",
       },
       { property: "og:title", content: "Astrivix — Web Development Studio" },
       {
         property: "og:description",
         content:
-          "Web design and development for ambitious brands. SaaS platforms, e-commerce, and brand sites that convert.",
+          "Selected work from Astrivix — SaaS platforms, e-commerce, and brand sites that convert.",
       },
     ],
   }),
@@ -34,10 +31,7 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
-        <TrustedBy />
         <Work />
-        <Features />
-        <Testimonials />
         <CTA />
       </main>
       <Footer />

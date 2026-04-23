@@ -42,27 +42,14 @@ export function Hero() {
               size="lg"
               className="bg-gradient-primary text-primary-foreground shadow-glow transition-spring hover:scale-105"
             >
-              <a href="#cta">
-                Start a Project <ArrowRight className="h-4 w-4" />
+              <a href="#work">
+                View Our Work <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-border/60 bg-surface/40 backdrop-blur">
-              <a href="#work">View Our Work</a>
+              <a href="#cta">Start a Project</a>
             </Button>
           </div>
-
-          <dl className="mt-16 grid grid-cols-3 gap-8 border-t border-border/40 pt-10 text-left">
-            {[
-              { v: "120+", l: "Projects shipped" },
-              { v: "40+", l: "Happy clients" },
-              { v: "5★", l: "Avg. rating" },
-            ].map((s) => (
-              <div key={s.l}>
-                <dt className="text-2xl font-semibold sm:text-3xl">{s.v}</dt>
-                <dd className="mt-1 text-xs text-muted-foreground sm:text-sm">{s.l}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
     </section>
