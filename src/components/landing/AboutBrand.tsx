@@ -32,7 +32,7 @@ export function AboutBrand() {
                 className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              
+
               <div className="absolute inset-x-0 bottom-0 p-8 sm:p-12 flex flex-col sm:flex-row items-end justify-between gap-6">
                 <div>
                   <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -42,7 +42,7 @@ export function AboutBrand() {
                     Explore our full suite of services, brand identity design, UI/UX, and app development.
                   </p>
                 </div>
-                
+
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-glow transition-spring group-hover:scale-110">
                   <ArrowUpRight className="h-6 w-6 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                 </div>
