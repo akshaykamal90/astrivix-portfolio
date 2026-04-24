@@ -7,6 +7,37 @@ const WHATSAPP_MESSAGE = "Hi Astrivix, I'd like to discuss a project.";
 
 import Grainient from "@/components/ui/Grainient";
 
+function AnimatedTitle() {
+  const words = ["Astrivix", "Creative", "Studio.", "Astrivix"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index >= words.length - 1) return;
+    const timeout = setTimeout(() => {
+      setIndex((i) => i + 1);
+    }, 1200);
+    return () => clearTimeout(timeout);
+  }, [index]);
+
+  return (
+    <span className="relative inline-grid overflow-hidden align-bottom pb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+      {words.map((word, i) => (
+        <span
+          key={i}
+          className="col-start-1 row-start-1 text-gradient italic transition-all duration-700 ease-[cubic-bezier(0.2,0.8,0.2,1)]"
+          style={{
+            transform: `translateY(${(i - index) * 100}%)`,
+            opacity: i === index ? 1 : 0,
+            pointerEvents: i === index ? 'auto' : 'none',
+          }}
+        >
+          {word}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export function Hero() {
   return (
     <>
@@ -49,9 +80,7 @@ export function Hero() {
         {/* Main Header */}
         <h1 className="text-center text-6xl font-bold leading-[0.95] tracking-tighter sm:text-7xl md:text-8xl lg:text-9xl">
           <span className="block text-white">Portfolio Of</span>
-          <span className="text-gradient italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            Astrivix
-          </span>
+          <AnimatedTitle />
         </h1>
 
         {/* Subtext */}
