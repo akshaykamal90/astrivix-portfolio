@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Download, MessageCircle, ChevronDown } from "lucide-react";
 
-const WHATSAPP_NUMBER = "+91 8921318291"; // TODO: replace with your number in international format (no +, no spaces)
+const WHATSAPP_NUMBER = "+918921318291"; // TODO: replace with your number in international format (no +, no spaces)
 const WHATSAPP_MESSAGE = "Hi Astrivix, I'd like to discuss a project.";
 
 import Grainient from "@/components/ui/Grainient";
