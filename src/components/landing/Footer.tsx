@@ -43,6 +43,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold">Studio</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li><a href="#work" className="hover:text-foreground">Work</a></li>
+              <li><a href="#syndicate-moto" className="hover:text-foreground">Syndicate Moto</a></li>
               <li><a href="#services" className="hover:text-foreground">Services</a></li>
               <li><a href="#testimonials" className="hover:text-foreground">Testimonials</a></li>
               <li><a href="#cta" className="hover:text-foreground">Contact</a></li>
